@@ -41,10 +41,10 @@ setInterval(() => {
     }
     
     function drawLine(centerx, centery, point, color = "black"){
-        
+        ctx.strokeStyle  = color;
+        ctx.beginPath()
         ctx.moveTo(centerx, centery);
         ctx.lineTo(point.x, point.y);
-        ctx.strokeStyle  = color;
         ctx.stroke();
         ctx.strokeStyle  = "black";
     }
@@ -57,7 +57,7 @@ setInterval(() => {
     
     drawLine(centerx, centery, pointOnCircle(centerx, centery, r1, theta1), "green");
     drawLine(centerx, centery, pointOnCircle(centerx, centery, r2, theta2), "blue" );
-    drawLine(centerx, centery, pointOnCircle(centerx, centery, r3, theta3));
+    drawLine(centerx, centery, pointOnCircle(centerx, centery, r3, theta3), "red");
 
     
 }, 1000)
