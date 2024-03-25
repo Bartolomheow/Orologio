@@ -29,9 +29,9 @@ setInterval(() => {
     let r1 = 150
     let r2 = 100
     let r3 = 50
-    let theta1 = seconds/60*2*Math.PI
-    let theta2 = minutes/60*2*Math.PI
-    let theta3 = hours%12*2*Math.PI
+    let theta1 = Math.PI/4+seconds/60*2*Math.PI
+    let theta2 = Math.PI/4+minutes/60*2*Math.PI
+    let theta3 = Math.PI/4+hours%12*2*Math.PI
     
     function pointOnCircle(centerx, centery, r, t){
         return {
